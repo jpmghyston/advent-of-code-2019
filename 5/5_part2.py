@@ -61,8 +61,6 @@ def get_parameters(parameter_modes):
     return param_1, param_2
 
 while memory[pointer] != 99:
-    # print pointer
-    # print memory
     instruction = str(memory[pointer]).zfill(5)
     opcode = int(instruction[-2:])
     param_modes = [int(d) for d in instruction[:3]]
@@ -87,6 +85,3 @@ while memory[pointer] != 99:
         pointer = less_than(param_modes)
     elif opcode == 8:
         pointer = equal_to(param_modes)
-
-# print pointer
-# print memory
