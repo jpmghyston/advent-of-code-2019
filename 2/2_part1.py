@@ -3,7 +3,6 @@ memory = [1, 12, 2, 3, 1, 1, 2, 3, 1, 3, 4, 3, 1, 5, 0, 3, 2, 6, 1, 19, 1, 5, 19
 
 
 pointer = 0
-
 while memory[pointer] != 99:
     opcode = memory[pointer]
     num_1 = memory[memory[pointer + 1]]
@@ -11,5 +10,6 @@ while memory[pointer] != 99:
     store_location = memory[pointer + 3]
     memory[store_location] = num_1 + num_2 if opcode == 1 else num_1 * num_2
     pointer += 4
+
 
 print memory[0]
